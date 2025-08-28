@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Grok‑ish Chat</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas class="stars"></canvas>
+
+  <header class="topbar">
+    <div class="logo">
+      <div class="logo-badge"></div>
+      <div class="glow">Grok‑ish Chat</div>
+    </div>
+    <div class="top-actions">
+      <button class="icon-btn" id="clear" title="Очистить чат" aria-label="Очистить">🧹</button>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="chat" class="chat" aria-live="polite" aria-label="Лента сообщений"></section>
+
+    <section class="composer">
+      <div class="hints" id="hints" aria-label="Подсказки">
+        <button class="hint">/help</button>
+        <button class="hint">/ideas интерфейс с анимациями</button>
+        <button class="hint">/optimize код и скорость</button>
+        <button class="hint">/explain этот фрагмент</button>
+      </div>
+
+      <div class="bar">
+        <label class="sr" for="input">Сообщение</label>
+        <textarea id="input" placeholder="Спроси что угодно… Enter — отправить, Shift+Enter — перенос"></textarea>
+        <div class="buttons">
+          <button id="stop" class="stop" style="display:none">Стоп</button>
+          <button id="send" class="send">
+            <span class="plane"></span> Отправить
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script defer src="app.js"></script>
+</body>
+</html>
